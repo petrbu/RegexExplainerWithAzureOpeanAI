@@ -1,0 +1,7 @@
+{
+  "azure_openai_key": "your-azure-openai-key",
+  "azure_openai_endpoint": "your-azure-openai-endpoint",
+  "azure_openai_deployment": "your-azure-openai-deployment",
+  "azure_openai_api_version": "your-azure-openai-api-version"
+
+}
