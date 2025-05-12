@@ -35,3 +35,4 @@ env/
 # Project specific
 data/output/
 config.json  
+data/

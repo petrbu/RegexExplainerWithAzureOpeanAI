@@ -34,7 +34,7 @@ class OpenAIService:
         except Exception as e:
             raise Exception(f"Error initializing Azure OpenAI client: {str(e)}")
     
-    def generate_completion(self, prompt, max_tokens=1000, temperature=0.7):
+    def generate_completion(self, prompt, max_tokens=10000, temperature=0.1):
         """
         Generate a completion using Azure OpenAI API.
         
