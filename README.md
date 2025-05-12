@@ -1,6 +1,6 @@
-# NLP Project for Translation
+# Regular Expression Explainer using Azure OpenAI
 
-This project appears to be focused on Natural Language Processing (NLP) tasks, specifically related to translation and utilizing Azure OpenAI services.
+This project processes a list of regular expressions, sends them to Azure OpenAI to generate concise explanations of what each regex matches, and saves the original regex along with its explanation to an output file.
 
 ## Project Structure
 
@@ -21,17 +21,21 @@ This project appears to be focused on Natural Language Processing (NLP) tasks, s
     ```
 3.  **Run the Application**:
     ```bash
-    python main.py <path_to_input_file> <path_to_output_file>
+    python3 main.py <path_to_input_file> <path_to_output_file>
     ```
     For example:
     ```bash
-    python main.py data/input/CTG_en-US_pt-BR_mini.txt data/output/processed_CTG_en-US_pt-BR_mini.csv
+    python3 main.py data/input/en-US_pt-BR_mini.txt data/output/processed_en-US_pt-BR_mini.csv
     ```
     **Note:** The paths `data/input/...` and `data/output/...` in the example are conventional. You can use any valid file paths. If you use the example input path, ensure the `data/input/` directory and the specified input file exist. The script will create the output directory (e.g., `data/output/`) if it doesn't already exist.
 
 ## Purpose
 
-The project seems to process input text files (containing text in different languages), potentially perform translations or other NLP tasks using Azure OpenAI, and then output the results in CSV format.
+This project takes an input file containing tab-separated data, where one column includes regular expressions. It processes these regular expressions in batches:
+1.  It sends each batch of regular expressions to the Azure OpenAI service.
+2.  It requests a very concise summary (explanation) of the literal words or short phrases that each regular expression matches. This is intended for a QA check, focusing on key terms.
+3.  It parses the explanations received from Azure OpenAI.
+4.  It then saves the original data along with the generated explanations into a new tab-separated UTF-16 CSV file.
 
 ## Setup
 

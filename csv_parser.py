@@ -5,7 +5,7 @@ from typing import List, Dict, Optional
 
 class TranslationPatternParser:
     """
-    Parser for CTG translation pattern files that are tab-separated.
+    Parser for translation pattern files that are tab-separated.
     Each row contains regular expression patterns and additional metadata.
     """
     
